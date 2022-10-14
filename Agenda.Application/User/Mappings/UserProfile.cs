@@ -16,7 +16,7 @@ namespace Agenda.Application.User.Mappings
             CreateMap<UserDto, Domain.Entities.User>().ReverseMap();
             CreateMap<UserPasswordDto, Domain.Entities.User>().ReverseMap();
             
-            CreateMap<UserDto,Person>().ForMember(dest => dest.FullName, op = op.MapFrom(source => $"{source.FirstName} {source.LastName}"));
+            CreateMap<UserDto,Person>().ForMember(dest => dest.FullName, op => op.MapFrom(source => $"{source.FirstName} {source.LastName}"));
             CreateMap<Person, UserDto>();
         }
     }

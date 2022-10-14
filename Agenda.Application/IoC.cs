@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Agenda.Application
 {
-    public class IoC
+    public static class IoC
     {
         public static IServiceCollection AddAplication(this IServiceCollection services)
         {

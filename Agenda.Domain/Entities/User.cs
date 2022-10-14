@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Agenda.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
         public string UserName { get; set; }
         public string Password { get; set; }
