@@ -30,7 +30,7 @@ namespace Agenda.Application.Generic.Handlers
 
         public async Task<bool> Delete(int id)
         {
-            return await _crudService;
+            return await _crudService.Delete(id);
         }
 
         public async Task<TDto> GetById(int id)
