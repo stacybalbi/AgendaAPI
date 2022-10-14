@@ -19,7 +19,9 @@ namespace Agenda.Application.User.Handlers
         new Task<UserPasswordDto> Create(UserPasswordDto dto);
     }
 
+
     public class UserHandler : BaseCrudHandler<UserPasswordDto, Domain.Entities.User>, IUserHandler {
+
         public UserHandler(IUserService crudService, IMapper mapper) : base(crudService, mapper)
         {
 
