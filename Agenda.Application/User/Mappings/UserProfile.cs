@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 
 namespace Agenda.Application.User.Mappings
 {
-    internal class UserProfile : Profile
+    public class UserProfile : Profile
     {
         public UserProfile()
         {
             CreateMap<UserDto, Domain.Entities.User>().ReverseMap();
             CreateMap<UserPasswordDto, Domain.Entities.User>().ReverseMap();
             
-            CreateMap<UserDto,Person>().ForMember(dest => dest.FullName, op => op.MapFrom(source => $"{source.FirstName} {source.LastName}"));
-            CreateMap<Person, UserDto>(); 
+            CreateMap<UserDto, Domain.Entities.Person>().ForMember(dest => dest.FullName, 
+                op => op.MapFrom(source => $"{source.FirstName} {source.LastName}"));
+
+            CreateMap<Domain.Entities.Person, UserDto>(); 
         }
     }
 }
