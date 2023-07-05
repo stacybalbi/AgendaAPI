@@ -10,7 +10,7 @@ namespace Agenda.Application.Interfaces
     public interface IBaseCrudService<TEntity> where TEntity : BaseEntity
     {
         IQueryable<TEntity> Query();
-        Task<List<TEntity>> Get(int maxCount = 100);
+        Task<List<TEntity>> Get(int top = 50);
         Task<TEntity> GetById(int id);
         Task<TEntity> Create(TEntity entity);
         Task<TEntity> Update(int id, TEntity entity);

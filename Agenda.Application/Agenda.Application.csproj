@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Agenda.Domain\Agenda.Domain.csproj" />
+    <ProjectReference Include="..\AgendaAPI\AgendaAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
